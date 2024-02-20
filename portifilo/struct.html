@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASHIKA PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1bd92e9125.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+
+        <div class="container  ">
+            <nav class="fixed-header">
+                <h1><span>Portfo</span>lio</h1>
+                <ul id="sidemenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about" onclick="scrollToSection('about')">About</a></li>
+                    <li><a href="#services" onclick="scrollToSection('services')">Services</a></li>
+                    <li><a href="#portfolio" onclick="scrollToSection('portfolio')">Projects</a></li>
+                    <li><a href="#contact" onclick="scrollToSection('contact')">Contact Us</a></li>
+                    <i class="fa-solid fa-square-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+<center>
+            <div class="header-text">
+                <h2><span>Hello,</span> My name is</h2>
+                <h1> <span>ASHIKA</span></h1>
+                <h4>I'am a Web Developer</h4>            
+            </div>  
+</center>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        I'm passionate about web development, equipped with a versatile
+                         skill set that spans both front-end and back-end technologies. 
+                         Proficient in HTML, CSS, and JavaScript, I craft engaging user
+                          interfaces that prioritize usability and aesthetics. My expertise extends
+                           to frameworks like React and Angular, enabling me to build dynamic,
+                            responsive web application.On the server side, I excel in languages such 
+                            as Node.js and Python, utilizing frameworks like Express and Django to 
+                            create robust, scalable back-end systems. I'm adept at database management
+                             with SQL and NoSQL databases, ensuring efficient data storage and retrieval.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <h2>Web Develop</h2>
+                    <p>Crafting digital experiences that captivate, inspire, and leave a lasting impression.</p>
+                    <a href="#">Read more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-font-awesome"></i>
+                    <h2>Figma</h2>
+                    <p>From Concept to Clickable: Bringing Designs to Life with Figma's Creative Power!</p>
+                    <a href="#">Read more</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work1.jpg">
+                </div>
+                <div class="work">
+                    <img src="images/work2.jpg">
+                </div>
+                <div class="work">
+                    <img src="images/work3.jpg">
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Us</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>mgta2k4@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>6324247390</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                             </div>
+                             <a href="images/resume.pdf" download class="btn btn2">Download CV</a>
+                    </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Enter Name" required>
+                    <input type="email" name="email" placeholder="Enter Email" required>
+                    <textarea name="Message" rows="6" placeholder="Enter Message" ></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+             </div>
+           </div>
+        </div>
+    </div>
+    <div class="credit">
+        <div class="credit-inside"></div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
